@@ -1,0 +1,12 @@
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\bin\Debug\net5.0\Api.CrossCutting.deps.json
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\bin\Debug\net5.0\Api.CrossCutting.dll
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\bin\Debug\net5.0\ref\Api.CrossCutting.dll
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\bin\Debug\net5.0\Api.CrossCutting.pdb
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\obj\Debug\net5.0\Api.CrossCutting.csproj.AssemblyReference.cache
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\obj\Debug\net5.0\Api.CrossCutting.GeneratedMSBuildEditorConfig.editorconfig
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\obj\Debug\net5.0\Api.CrossCutting.AssemblyInfoInputs.cache
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\obj\Debug\net5.0\Api.CrossCutting.AssemblyInfo.cs
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\obj\Debug\net5.0\Api.CrossCutting.csproj.CoreCompileInputs.cache
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\obj\Debug\net5.0\Api.CrossCutting.dll
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\obj\Debug\net5.0\ref\Api.CrossCutting.dll
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\obj\Debug\net5.0\Api.CrossCutting.pdb
