@@ -10,3 +10,6 @@ D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.Data\obj\Debug\ne
 D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.Data\obj\Debug\net5.0\Data.dll
 D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.Data\obj\Debug\net5.0\ref\Data.dll
 D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.Data\obj\Debug\net5.0\Data.pdb
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.Data\bin\Debug\net5.0\Data.runtimeconfig.json
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.Data\bin\Debug\net5.0\Data.runtimeconfig.dev.json
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.Data\obj\Debug\net5.0\Data.genruntimeconfig.cache
