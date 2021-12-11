@@ -22,9 +22,24 @@ namespace Api.Data.Repository
             this._context = context;
             this._dataset = this._context.Set<TEntity>();
         }
-        public Task<bool> DeleteAync(Guid id)
+        public async Task<bool> DeleteAync(Guid id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var result = await this._dataset.SingleOrDefaultAsync(t => t.Id.Equals(id));
+                if (result == null)
+                    return false;
+
+                this._dataset.Remove(result);
+
+                await this._context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public async Task<TEntity> InsertAsync(TEntity item)
@@ -40,13 +55,14 @@ namespace Api.Data.Repository
                 this._dataset.Add(item);
 
                 await this._context.SaveChangesAsync();
+                return item;
             }
             catch (Exception ex)
             {
 
                 throw ex;
             }
-            return item;
+
         }
 
         public Task<TEntity> SelectAsync(Guid id)
@@ -72,13 +88,14 @@ namespace Api.Data.Repository
 
                 this._context.Entry(result).CurrentValues.SetValues(item);
                 await this._context.SaveChangesAsync();
+                return item;
             }
             catch (Exception ex)
             {
 
                 throw ex;
             }
-            return item;
+
         }
     }
 }
