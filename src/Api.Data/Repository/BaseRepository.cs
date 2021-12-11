@@ -42,6 +42,11 @@ namespace Api.Data.Repository
             }
         }
 
+        public async Task<bool> ExistAsync(Guid id)
+        {
+            return await this._dataset.AnyAsync(t => t.Id.Equals(id));
+        }
+
         public async Task<TEntity> InsertAsync(TEntity item)
         {
             try
@@ -65,14 +70,28 @@ namespace Api.Data.Repository
 
         }
 
-        public Task<TEntity> SelectAsync(Guid id)
+        public async Task<TEntity> SelectAsync(Guid id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await this._dataset.SingleOrDefaultAsync(t => t.Id.Equals(id));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
-        public Task<IEnumerable<TEntity>> SelectAsync()
+        public async Task<IEnumerable<TEntity>> SelectAsync()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await this._dataset.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public async Task<TEntity> UpdateAsync(TEntity item)
