@@ -17,5 +17,7 @@ namespace Api.Domain
         Task<TEntity> SelectAsync(Guid id);
 
         Task<IEnumerable<TEntity>> SelectAsync();
+
+        Task<bool> ExistAsync(Guid id);
     }
 }
