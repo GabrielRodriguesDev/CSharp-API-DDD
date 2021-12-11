@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using Api.Data.Context;
 using Api.Domain;
 using Api.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Api.Data.Repository
 {
@@ -16,10 +16,11 @@ namespace Api.Data.Repository
 
         private DbSet<TEntity> _dataset;
 
+
         public BaseRepository(MyContext context)
         {
             this._context = context;
-            //this._dataset = _context.Set<TEntity>();
+            this._dataset = this._context.Set<TEntity>();
         }
         public Task<bool> DeleteAync(Guid id)
         {
@@ -36,7 +37,7 @@ namespace Api.Data.Repository
                 }
 
                 item.CreateAt = DateTime.UtcNow;
-                this._context.Add(item);
+                this._dataset.Add(item);
 
                 await this._context.SaveChangesAsync();
             }
@@ -58,9 +59,26 @@ namespace Api.Data.Repository
             throw new NotImplementedException();
         }
 
-        public Task<TEntity> UpdateAsync(TEntity item)
+        public async Task<TEntity> UpdateAsync(TEntity item)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var result = await this._dataset.SingleOrDefaultAsync(t => t.Id.Equals(item.Id));
+                if (result == null)
+                    return null;
+
+                item.UpdateAt = DateTime.UtcNow;
+                item.CreateAt = result.CreateAt;
+
+                this._context.Entry(result).CurrentValues.SetValues(item);
+                await this._context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            return item;
         }
     }
 }
