@@ -12,8 +12,13 @@ namespace Api.Application.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
+        private readonly IUserService _service;
+        public UsersController(IUserService service)
+        {
+            this._service = service;
+        }
         [HttpGet]
-        public async Task<ActionResult> GetAll([FromServices] IUserService service)
+        public async Task<ActionResult> GetAll()
         {
             //ActionResult é uma classe que lida com vários tipos de arquivos. Json XML.... Então estou
             //dizendo vai retonar um JSON ou XML... entre outros.
@@ -24,7 +29,7 @@ namespace Api.Application.Controllers
 
             try
             {
-                return Ok(await service.GetAll());
+                return Ok(await this._service.GetAll());
             }
             catch (ArgumentException e) //ArgumentException -> Para tratar erros de Controller
             {

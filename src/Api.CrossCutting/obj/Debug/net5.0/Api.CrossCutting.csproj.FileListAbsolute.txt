@@ -10,3 +10,13 @@ D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\obj\
 D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\obj\Debug\net5.0\Api.CrossCutting.dll
 D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\obj\Debug\net5.0\ref\Api.CrossCutting.dll
 D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\obj\Debug\net5.0\Api.CrossCutting.pdb
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\bin\Debug\net5.0\Api.CrossCutting.runtimeconfig.json
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\bin\Debug\net5.0\Api.CrossCutting.runtimeconfig.dev.json
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\bin\Debug\net5.0\Data.dll
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\bin\Debug\net5.0\Domain.dll
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\bin\Debug\net5.0\Service.dll
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\bin\Debug\net5.0\Domain.pdb
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\bin\Debug\net5.0\Service.pdb
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\bin\Debug\net5.0\Data.pdb
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\obj\Debug\net5.0\Api.CrossCutting.csproj.CopyComplete
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.CrossCutting\obj\Debug\net5.0\Api.CrossCutting.genruntimeconfig.cache
