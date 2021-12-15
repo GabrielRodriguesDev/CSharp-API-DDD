@@ -36,7 +36,18 @@ namespace application
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "application", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "API - DDD",
+                    Version = "v1",
+                    Description = "Projeto criado com base no curso API - AspNetCore - DDD",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Gabriel Silva Rodrigues Mota",
+                        Email = "gabriel.rodrigues.mota@outlook.com",
+                        Url = new Uri("https://github.com/GabrielRodriguesDev/CSharp-API-DDD.git")
+                    }
+                });
             });
         }
 
@@ -47,8 +58,15 @@ namespace application
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "application v1"));
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Asp.Net - DDD");
+                    c.RoutePrefix = string.Empty;
+                    c.InjectStylesheet("/swagger-ui/SwaggerDark.css");
+                });
             }
+
+            app.UseStaticFiles();
 
             app.UseRouting();
 
