@@ -111,6 +111,7 @@ namespace Api.Data.Repository
             }
             catch (Exception ex)
             {
+
                 throw ex;
             }
         }
