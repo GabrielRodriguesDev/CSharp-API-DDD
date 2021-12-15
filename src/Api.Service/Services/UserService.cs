@@ -36,7 +36,7 @@ namespace Api.Service.Services
 
         public async Task<UserEntity> Post(UserEntity user)
         {
-            return await this._repository.UpdateAsync(user);
+            return await this._repository.InsertAsync(user);
         }
 
         public async Task<UserEntity> Put(UserEntity user)
