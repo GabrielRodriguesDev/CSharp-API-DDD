@@ -17,6 +17,7 @@ namespace Api.CrossCutting.DependecyInjection
             //Existe diferenças entre os métodos, aqui vamos usar o addTrasient mas por questões
             // de facilitação didática.
             serviceCollection.AddTransient<IUserService, UserService>();
+            serviceCollection.AddTransient<ILoginService, LoginService>();
         }
     }
 }
