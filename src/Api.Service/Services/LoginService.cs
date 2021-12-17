@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Api.Domain.Entities;
+using Api.Domain.Dtos;
 using Api.Domain.Interfaces.Services.Users;
 using Api.Domain.Repository;
 
@@ -16,11 +16,11 @@ namespace Api.Service.Services
         {
             this._repository = repository;
         }
-        public async Task<object> FindByLogin(UserEntity user)
+        public async Task<object> FindByLogin(LoginDto logindata)
         {
-            if (user != null && !string.IsNullOrWhiteSpace(user.Email))
+            if (logindata != null && !string.IsNullOrWhiteSpace(logindata.Email))
             {
-                return await this._repository.FindByLogin(user.Email);
+                return await this._repository.FindByLogin(logindata.Email);
             }
             else
             {

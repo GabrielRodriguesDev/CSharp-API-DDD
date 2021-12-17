@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using Api.Domain.Entities;
+using Api.Domain.Dtos;
 using Api.Domain.Interfaces.Services.Users;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,20 +24,20 @@ namespace Api.Application.Controllers
 
 
         [HttpPost]
-        public async Task<object> Login([FromBody] UserEntity user)
+        public async Task<object> Login([FromBody] LoginDto logindata)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
-            if (user == null)
+            if (logindata == null)
             {
                 return BadRequest();
             }
 
             try
             {
-                var result = await this._service.FindByLogin(user);
+                var result = await this._service.FindByLogin(logindata);
                 if (result != null)
                 {
                     return Ok(result);
