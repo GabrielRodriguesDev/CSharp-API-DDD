@@ -56,3 +56,7 @@ D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.Application\bin\D
 D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.Application\bin\Debug\net5.0\Data.pdb
 D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.Application\bin\Debug\net5.0\AutoMapper.dll
 D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.Application\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.Application\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.Application\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.Application\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\Technology\Sistemas\Gabriel\ASPNET\Udemy\CSharp-API\src\Api.Application\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll

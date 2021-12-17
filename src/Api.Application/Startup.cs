@@ -13,6 +13,8 @@ using Microsoft.OpenApi.Models;
 using Api.CrossCutting.DependecyInjection;
 using Api.Data.Context;
 using Microsoft.EntityFrameworkCore;
+using Api.Domain.Security;
+using Microsoft.Extensions.Options;
 
 namespace application
 {
@@ -32,6 +34,15 @@ namespace application
             //Cofigurando motores de DI
             ConfigureService.ConfigureDependeciesService(services);
             ConfigureRepository.ConfigureDependeciesRepository(services);
+
+            var signingConfigurations = new SigningConfigurations();// DI de Signing Configuration
+            services.AddSingleton(signingConfigurations);//Adicionando na lista de serviços a classe
+
+            var tokenConfiguration = new TokenConfiguration(); //DI de Token Configuration
+            new ConfigureFromConfigurationOptions<TokenConfiguration>(
+                Configuration.GetSection("TokenConfiguration")) // Imbutindo o objeto TokenConfiguration no appsetings.json
+                .Configure(tokenConfiguration);// Já criando e populando a classe com os valores que foram pegos no GetSection()
+            services.AddSingleton(tokenConfiguration); //Adicionando na lista de serviços a classe
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
