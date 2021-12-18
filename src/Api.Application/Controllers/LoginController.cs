@@ -5,6 +5,7 @@ using System.Net;
 using System.Threading.Tasks;
 using Api.Domain.Dtos;
 using Api.Domain.Interfaces.Services.Users;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Application.Controllers
@@ -22,7 +23,7 @@ namespace Api.Application.Controllers
             this._service = service;
         }
 
-
+        [AllowAnonymous]
         [HttpPost]
         public async Task<object> Login([FromBody] LoginDto logindata)
         {
@@ -40,7 +41,7 @@ namespace Api.Application.Controllers
                 var result = await this._service.FindByLogin(logindata);
                 if (result != null)
                 {
-                    return Ok(result);
+                    return NotFound(result);
                 }
                 else
                 {

@@ -41,7 +41,11 @@ namespace Api.Service.Services
                 var user = await this._repository.FindByLogin(logindata.Email);
                 if (user == null)
                 {
-                    return null;
+                    return new
+                    {
+                        authenticated = false,
+                        message = "Falha ao autenticar"
+                    };
                 }
                 else
                 {
@@ -64,7 +68,11 @@ namespace Api.Service.Services
             }
             else
             {
-                return null;
+                return new
+                {
+                    authenticated = false,
+                    message = "Falha ao autenticar"
+                };
             }
         }
 

@@ -15,6 +15,8 @@ using Api.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Api.Domain.Security;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 
 namespace application
 {
@@ -43,6 +45,28 @@ namespace application
                 Configuration.GetSection("TokenConfiguration")) // Imbutindo o objeto TokenConfiguration no appsetings.json
                 .Configure(tokenConfiguration);// Já criando e populando a classe com os valores que foram pegos no GetSection()
             services.AddSingleton(tokenConfiguration); //Adicionando na lista de serviços a classe
+
+            services.AddAuthentication(authOptions => //Configurando a autenticação 
+            {
+                authOptions.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                authOptions.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(bearerOptions =>
+            {
+                var paramsValidation = bearerOptions.TokenValidationParameters;
+                paramsValidation.IssuerSigningKey = signingConfigurations.Key;
+                paramsValidation.ValidAudience = tokenConfiguration.Audience;
+                paramsValidation.ValidIssuer = tokenConfiguration.Issuer;
+                paramsValidation.ValidateIssuerSigningKey = true;
+                paramsValidation.ValidateLifetime = true;
+                paramsValidation.ClockSkew = TimeSpan.Zero;
+            });
+
+            services.AddAuthorization(auth => //Add a autenticação
+            {
+                auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
+                .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+                .RequireAuthenticatedUser().Build());
+            });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
