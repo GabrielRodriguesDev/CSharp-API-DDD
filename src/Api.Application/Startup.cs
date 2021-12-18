@@ -83,6 +83,24 @@ namespace application
                         Url = new Uri("https://github.com/GabrielRodriguesDev/CSharp-API-DDD.git")
                     }
                 });
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme //Adicionando o botão de  "Authorization" no Swagger
+                {
+                    Description = "Informe o token JWT",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement { //Implentando a autenticação no botão Authorizantion
+                    {
+                        new OpenApiSecurityScheme {
+                            Reference = new OpenApiReference {
+                                Id = "Bearer",
+                                Type = ReferenceType.SecurityScheme
+                            }
+                        }, new List<string>()
+                    }
+                });
             });
         }
 

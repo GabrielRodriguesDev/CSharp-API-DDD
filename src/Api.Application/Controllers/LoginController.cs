@@ -41,7 +41,7 @@ namespace Api.Application.Controllers
                 var result = await this._service.FindByLogin(logindata);
                 if (result != null)
                 {
-                    return NotFound(result);
+                    return Ok(result);
                 }
                 else
                 {
