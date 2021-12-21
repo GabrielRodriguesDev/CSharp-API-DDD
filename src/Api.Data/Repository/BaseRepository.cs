@@ -74,6 +74,7 @@ namespace Api.Data.Repository
         {
             try
             {
+
                 return await this._dataset.SingleOrDefaultAsync(t => t.Id.Equals(id));
             }
             catch (Exception ex)
