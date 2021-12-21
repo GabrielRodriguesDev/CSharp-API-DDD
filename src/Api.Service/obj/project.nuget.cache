@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "MHqFeYvv1QphvxmQPmPweFjfgKUsIQJL6EKKZr/plqmBU7/BHS5YtmdwY8wfNEEe5Tlf3ODex4ouBqvry8qb6g==",
+  "dgSpecHash": "Ny/FLg3lcyGTsn9/UqRlTsspCSBzW9JoD9AV1uslSIAsh9u6XW/m5FOote/Dtip9lsdPFbLY8f+wxbXyohMqAA==",
   "success": true,
   "projectFilePath": "D:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Service\\Service.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\gabri\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.10\\microsoft.entityframeworkcore.5.0.10.nupkg.sha512",
@@ -39,6 +40,7 @@
     "C:\\Users\\gabri\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.15.0\\system.identitymodel.tokens.jwt.6.15.0.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.7.0\\system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",
