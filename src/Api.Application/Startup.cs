@@ -17,6 +17,8 @@ using Api.Domain.Security;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Api.CrossCutting.Mappings;
+using AutoMapper;
 
 namespace application
 {
@@ -36,6 +38,16 @@ namespace application
             //Cofigurando motores de DI
             ConfigureService.ConfigureDependeciesService(services);
             ConfigureRepository.ConfigureDependeciesRepository(services);
+
+            var configMapper = new AutoMapper.MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new DtoToModelProfile());
+                cfg.AddProfile(new ModelToEntityProfile());
+                cfg.AddProfile(new EntityToDtoProfile());
+            });
+
+            IMapper mapper = configMapper.CreateMapper();
+            services.AddSingleton(mapper);
 
             var signingConfigurations = new SigningConfigurations();// DI de Signing Configuration
             services.AddSingleton(signingConfigurations);//Adicionando na lista de serviços a classe
