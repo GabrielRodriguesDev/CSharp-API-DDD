@@ -19,10 +19,19 @@ namespace Api.CrossCutting.DependecyInjection
             serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             serviceCollection.AddScoped<IUserRepository, UserImplementation>();
 
-            var connectionString = "server=localhost;port=3306;database=dbAPI;uid=root;password=fx870";
-            serviceCollection.AddDbContext<MyContext>(
-                options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
+            if (Environment.GetEnvironmentVariable("DATABASE").ToLower() == "SQLSERVER".ToLower())
+            {
+                serviceCollection.AddDbContext<MyContext>(
+                    options => options.UseSqlServer(Environment.GetEnvironmentVariable("DB_CONNECTION"))
+                );
+            }
+            else
+            {
+                var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION");
+                serviceCollection.AddDbContext<MyContext>(
+                    options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
             );
+            }
         }
     }
 }

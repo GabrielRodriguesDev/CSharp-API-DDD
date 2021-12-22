@@ -29,8 +29,5 @@ namespace Api.Data.Context
                 }
             );
         }
-
-
-
     }
 }
