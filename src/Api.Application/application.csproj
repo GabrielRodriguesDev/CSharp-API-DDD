@@ -5,10 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.13" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.13" /> <!--JWT-->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" /> <!--Swagger-->
   </ItemGroup>
 
+<!--Referencia Internas-->
   <ItemGroup>
     <ProjectReference Include="..\Api.Service\Service.csproj" />
     <ProjectReference Include="..\Api.Domain\Domain.csproj" />

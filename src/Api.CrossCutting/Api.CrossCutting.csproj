@@ -1,5 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+
+<!-- Referencia interna-->
   <ItemGroup>
     <ProjectReference Include="..\Api.Domain\Domain.csproj" />
     <ProjectReference Include="..\Api.Service\Service.csproj" />
@@ -7,8 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="10.1.1" />
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" /> <!--AutoMapper-->
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" /> <!--DI - Injecao de Dependencia-->
   </ItemGroup>
 
   <PropertyGroup>
