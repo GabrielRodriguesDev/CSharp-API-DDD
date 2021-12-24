@@ -6009,11 +6009,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Application\\application.csproj",
+      "projectUniqueName": "d:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Application\\application.csproj",
       "projectName": "application",
-      "projectPath": "D:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Application\\application.csproj",
+      "projectPath": "d:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Application\\application.csproj",
       "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-      "outputPath": "D:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Application\\obj\\",
+      "outputPath": "d:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6030,14 +6030,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.CrossCutting\\Api.CrossCutting.csproj": {
-              "projectPath": "D:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.CrossCutting\\Api.CrossCutting.csproj"
+            "d:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.CrossCutting\\Api.CrossCutting.csproj": {
+              "projectPath": "d:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.CrossCutting\\Api.CrossCutting.csproj"
             },
-            "D:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Domain\\Domain.csproj": {
-              "projectPath": "D:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Domain\\Domain.csproj"
+            "d:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Domain\\Domain.csproj": {
+              "projectPath": "d:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Domain\\Domain.csproj"
             },
-            "D:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Service\\Service.csproj": {
-              "projectPath": "D:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Service\\Service.csproj"
+            "d:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Service\\Service.csproj": {
+              "projectPath": "d:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Service\\Service.csproj"
             }
           }
         }

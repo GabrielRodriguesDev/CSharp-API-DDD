@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ik5JgkVt69+532434G7mZ4n5INKxFZujxHKdK3tqSawbMKN6OIgG8WDqUZK3HinI3HQA1dRj1kOKENfpSHAMgw==",
+  "dgSpecHash": "EC6IXX8WRp3szrypm7Gmmgol80faCFCiEYS7zSW+J3jBl05M4psL70tDKrY95Ozc6jm40X3giYfyXh6jKO/4hA==",
   "success": true,
-  "projectFilePath": "D:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Data\\Data.csproj",
+  "projectFilePath": "d:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Data\\Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
