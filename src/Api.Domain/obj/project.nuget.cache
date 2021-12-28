@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O7Oi67ewlrLv3D7BPCTadeOMNpsBPlcmXQzBhbOMO1RaNx3Aq4U6KXW2YtlpVV4s6o7bzNYE8ZBKlt1bFic7qA==",
+  "dgSpecHash": "I32sQAjUB4pjdkRIdvsZ4cZ/3uuXPvm8IOX/hnrkT16cLXLKp0naDCkhOBYzywp6NQ98X24Vpglrxi1ih6VKBQ==",
   "success": true,
-  "projectFilePath": "d:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Domain\\Domain.csproj",
+  "projectFilePath": "D:\\Technology\\Sistemas\\Gabriel\\ASPNET\\Udemy\\CSharp-API\\src\\Api.Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.15.0\\microsoft.identitymodel.jsonwebtokens.6.15.0.nupkg.sha512",

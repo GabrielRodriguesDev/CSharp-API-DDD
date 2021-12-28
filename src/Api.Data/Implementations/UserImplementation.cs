@@ -10,12 +10,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Api.Data.Implementations
 {
-    public class UserImplementation : IUserRepository
+    public class UserImplementation : BaseRepository<UserEntity>, IUserRepository
     {
 
         private DbSet<UserEntity> _dataset;
 
-        public UserImplementation(MyContext context)
+        public UserImplementation(MyContext context) : base(context)
         {
             this._dataset = context.Set<UserEntity>();
         }

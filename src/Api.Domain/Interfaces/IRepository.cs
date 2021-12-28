@@ -12,7 +12,7 @@ namespace Api.Domain
 
         Task<TEntity> UpdateAsync(TEntity item);
 
-        Task<bool> DeleteAync(Guid id);
+        Task<bool> DeleteAsync(Guid id);
 
         Task<TEntity> SelectAsync(Guid id);
 

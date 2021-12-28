@@ -22,7 +22,7 @@ namespace Api.Data.Repository
             this._context = context;
             this._dataset = this._context.Set<TEntity>();
         }
-        public async Task<bool> DeleteAync(Guid id)
+        public async Task<bool> DeleteAsync(Guid id)
         {
             try
             {
