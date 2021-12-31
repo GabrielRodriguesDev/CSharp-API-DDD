@@ -1,0 +1,19 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: '3.4'
+
+services:
+  application:
+    image: application
+    build:
+      context: .
+      dockerfile: src/Api.Application/Dockerfile
+    ports:
+      - 5000:5000
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
+      MYSQL_DATABASE: dbAPI
+      MYSQL_USER: root
+      MYSQL_PASSWORD: fx870
