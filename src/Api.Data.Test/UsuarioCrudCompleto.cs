@@ -9,10 +9,10 @@ using Xunit;
 
 namespace Api.Data.Test
 {
-    public class UsuarioCrudCompleto : BaseTest, IClassFixture<DbTeste>
+    public class UsuarioCrudCompleto : BaseTest, IClassFixture<DbTeste> //IClassFixture<> É uma interface que permite acessar instancias de outra classe (Basicamente libera uma injeção de dependencia para nós);
     {
         private ServiceProvider _serviceProvider { get; set; }
-        public UsuarioCrudCompleto(DbTeste dbTeste)
+        public UsuarioCrudCompleto(DbTeste dbTeste) //Recebendo a classe que que foi tagueada com IClassFixture<>
         {
             this._serviceProvider = dbTeste.ServiceProvider; //Recebendo o container de serviços
         }

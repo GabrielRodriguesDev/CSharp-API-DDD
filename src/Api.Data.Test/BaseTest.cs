@@ -30,7 +30,7 @@ namespace Api.Data.Test
             );
 
             ServiceProvider = serviceColletion.BuildServiceProvider(); //Criando o container de Serviços
-            using (var context = ServiceProvider.GetService<MyContext>()) // Usando o bloco using pois após a execução do bloco terminar ele vai usar o Dispose para elimitar as variaveis da memoria
+            using (var context = ServiceProvider.GetService<MyContext>()) // Recebendo o contexto de conexão com o BD// Usando o bloco using pois após a execução do bloco terminar ele vai usar o Dispose para elimitar as variaveis da memoria
             {
                 context.Database.EnsureCreated(); //Criando o Bd de teste e rodando as migrações
             }

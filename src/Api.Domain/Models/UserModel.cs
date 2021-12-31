@@ -29,7 +29,7 @@ namespace Api.Domain.Models
         }
 
         private DateTime _createAt;
-        public DateTime CreatAt
+        public DateTime CreateAt
         {
             get { return _createAt; }
             set
