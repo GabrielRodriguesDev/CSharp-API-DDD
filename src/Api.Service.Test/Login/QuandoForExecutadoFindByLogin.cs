@@ -11,8 +11,6 @@ namespace Api.Service.Test.Login
 {
     public class QuandoForExecutadoFindByLogin
     {
-        private ILoginService _service;
-
         private Mock<ILoginService> _serviceMock;
 
         [Fact(DisplayName = "É possivel executar o método FindByLogin")]
@@ -37,10 +35,9 @@ namespace Api.Service.Test.Login
 
             _serviceMock = new Mock<ILoginService>(); //Crição do Objeto fortemente tipado que utiliza a interface ILoginService, sendo então fortemente tipado. 
             _serviceMock.Setup(m => m.FindByLogin(loginDto)).ReturnsAsync(objetoRetorno); //Realizando o Setup do mock, dizendo que quando chamar o método FindByLogin passando um "loginDto" como parametro, o retorno será um "objetoRetorno"
-            _service = _serviceMock.Object;
 
 
-            var result = await _service.FindByLogin(loginDto);
+            var result = await _serviceMock.Object.FindByLogin(loginDto); //Realizando o teste de uma forma diferente, usando o objeto do mock que fizemos o setup para fazer a execução do método
             Assert.NotNull(result);
         }
     }
