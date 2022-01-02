@@ -47,7 +47,7 @@ namespace Api.Application.Test.Usuario.QuandoRequisitarCreate
             _controller.Url = url.Object;
 
             var result = await _controller.Post(userDtoCreate);
-            Assert.True(result is BadRequestObjectResult);
+            Assert.True(result is BadRequestResult);
         }
     }
 }

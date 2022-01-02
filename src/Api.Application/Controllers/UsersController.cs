@@ -29,7 +29,7 @@ namespace Api.Application.Controllers
             //dizendo vai retonar um JSON ou XML... entre outros.
             if (!ModelState.IsValid)
             {
-                BadRequest(ModelState);
+                return BadRequest();
             }
             try
             {
