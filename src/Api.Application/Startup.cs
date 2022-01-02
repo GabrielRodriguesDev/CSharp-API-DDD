@@ -24,16 +24,30 @@ namespace application
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
             Configuration = configuration;
+            _environment = environment;
         }
 
         public IConfiguration Configuration { get; }
 
+        public IWebHostEnvironment _environment { get; }
+
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            if (_environment.IsEnvironment("Testing"))
+            {
+                Environment.SetEnvironmentVariable("DB_CONNECTION", "Persist Security info=True;server=localhost;port=3306;database=dbAPI_Integration;uid=root;password=fx870");
+                Environment.SetEnvironmentVariable("DATABASE", "MYSQL");
+                Environment.SetEnvironmentVariable("MIGRATION", "APLICAR");
+                Environment.SetEnvironmentVariable("Audience", "GabrielExemploAudience");
+                Environment.SetEnvironmentVariable("Issuer", "GabrielExemploIssuer");
+                Environment.SetEnvironmentVariable("Seconds", "2000");
+            }
 
             //Cofigurando motores de DI
             ConfigureService.ConfigureDependeciesService(services);

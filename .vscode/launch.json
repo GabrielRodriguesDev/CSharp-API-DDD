@@ -18,7 +18,10 @@
                 "ASPNETCORE_ENVIRONMENT": "Development",
                 "DB_CONNECTION": "server=localhost;port=3306;database=dbAPI;uid=root;password=fx870",
                 "DATABASE": "MYSQL",
-                "MIGRATION": "NAO APLICAR"
+                "MIGRATION": "NAO APLICAR",
+                "Audience": "GabrielExemploAudience",
+                "Issuer": "GabrielExemploIssuer",
+                "Seconds": "2000"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
