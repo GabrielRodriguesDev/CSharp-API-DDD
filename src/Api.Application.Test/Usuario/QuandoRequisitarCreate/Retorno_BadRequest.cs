@@ -16,7 +16,7 @@ namespace Api.Application.Test.Usuario.QuandoRequisitarCreate
         private UsersController _controller;
 
         [Fact(DisplayName = "É possivel realizar o Created.")]
-        public async Task E_Possivel_Invocar_Controller_BadRequest()
+        public async Task E_Possivel_Invocar_Controller_Create()
         {
             var serviceMock = new Mock<IUserService>();
             var name = Faker.Name.FullName();
