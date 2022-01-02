@@ -57,64 +57,13 @@
             ]
         },
         {
-            "type": "docker-build",
-            "label": "docker-build: debug",
-            "dependsOn": [
-                "build"
-            ],
-            "dockerBuild": {
-                "tag": "csharpapi:dev",
-                "target": "base",
-                "dockerfile": "${workspaceFolder}/src/Api.Application/Dockerfile",
-                "context": "${workspaceFolder}",
-                "pull": true
-            },
-            "netCore": {
-                "appProject": "${workspaceFolder}/src/Api.Application/application.csproj"
-            }
+            "label": "Application.Test",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "test",
+                "${workspaceFolder}/src/Api.Application.Test/Api.Application.Test.csproj"
+            ]
         },
-        {
-            "type": "docker-build",
-            "label": "docker-build: release",
-            "dependsOn": [
-                "build"
-            ],
-            "dockerBuild": {
-                "tag": "csharpapi:latest",
-                "dockerfile": "${workspaceFolder}/src/Api.Application/Dockerfile",
-                "context": "${workspaceFolder}",
-                "pull": true
-            },
-            "netCore": {
-                "appProject": "${workspaceFolder}/src/Api.Application/application.csproj"
-            }
-        },
-        {
-            "type": "docker-run",
-            "label": "docker-run: debug",
-            "dependsOn": [
-                "docker-build: debug"
-            ],
-            "dockerRun": {
-                "os": "Windows"
-            },
-            "netCore": {
-                "appProject": "${workspaceFolder}/src/Api.Application/application.csproj",
-                "enableDebugging": true
-            }
-        },
-        {
-            "type": "docker-run",
-            "label": "docker-run: release",
-            "dependsOn": [
-                "docker-build: release"
-            ],
-            "dockerRun": {
-                "os": "Windows"
-            },
-            "netCore": {
-                "appProject": "${workspaceFolder}/src/Api.Application/application.csproj"
-            }
-        }
     ]
 }
