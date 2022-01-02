@@ -48,7 +48,7 @@ namespace Api.Application.Controllers
         {
             if (!ModelState.IsValid)
             {
-                BadRequest(ModelState);
+                return BadRequest();
             }
             try
             {
@@ -75,7 +75,7 @@ namespace Api.Application.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return BadRequest();
             }
             try
             {
