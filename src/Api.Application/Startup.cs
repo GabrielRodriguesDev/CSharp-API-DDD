@@ -66,11 +66,6 @@ namespace application
             var signingConfigurations = new SigningConfigurations();// DI de Signing Configuration
             services.AddSingleton(signingConfigurations);//Adicionando na lista de serviços a classe
 
-            var tokenConfiguration = new TokenConfiguration(); //DI de Token Configuration
-            new ConfigureFromConfigurationOptions<TokenConfiguration>(
-                Configuration.GetSection("TokenConfiguration")) // Imbutindo o objeto TokenConfiguration no appsetings.json
-                .Configure(tokenConfiguration);// Já criando e populando a classe com os valores que foram pegos no GetSection()
-            services.AddSingleton(tokenConfiguration); //Adicionando na lista de serviços a classe
 
             services.AddAuthentication(authOptions => //Configurando a autenticação 
             {
@@ -80,8 +75,8 @@ namespace application
             {
                 var paramsValidation = bearerOptions.TokenValidationParameters;
                 paramsValidation.IssuerSigningKey = signingConfigurations.Key;
-                paramsValidation.ValidAudience = tokenConfiguration.Audience;
-                paramsValidation.ValidIssuer = tokenConfiguration.Issuer;
+                paramsValidation.ValidAudience = Environment.GetEnvironmentVariable("Audience");
+                paramsValidation.ValidIssuer = Environment.GetEnvironmentVariable("Issuer");
                 paramsValidation.ValidateIssuerSigningKey = true;
                 paramsValidation.ValidateLifetime = true;
                 paramsValidation.ClockSkew = TimeSpan.Zero;
