@@ -66,8 +66,8 @@ namespace Api.Data.Test
                 //Test Login
                 var _usuarioPadrao = await _repositorio.FindByLogin("gabriel@gabriel.com");
                 Assert.NotNull(_usuarioPadrao);
-                Assert.Equal("Administrador", _usuarioPadrao.Email);
-                Assert.Equal("gabriel@gabriel.com", _usuarioPadrao.Name);
+                Assert.Equal("Administrador", _usuarioPadrao.Name);
+                Assert.Equal("gabriel@gabriel.com", _usuarioPadrao.Email);
             }
         }
     }
