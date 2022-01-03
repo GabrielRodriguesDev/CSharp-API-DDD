@@ -80,6 +80,16 @@ namespace Api.Integration.Test.Usuario
             Assert.Equal(registroSelecionado.Email, registroAtualizado.Email);
 
             #endregion
+
+            #region  Delete
+            response = await client.DeleteAsync($"{hostApi}users/{registroSelecionado.Id}");
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            #endregion
+
+            #region  Get Pós Delete
+            response = await client.GetAsync($"{hostApi}users/{registroSelecionado.Id}");
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+            #endregion
         }
     }
 }
