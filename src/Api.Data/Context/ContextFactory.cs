@@ -11,6 +11,7 @@ namespace Api.Data.Context
     {
         public MyContext CreateDbContext(string[] args)
         {
+
             //Usado para criar migrações
             var connectionString = "server=localhost;port=3306;database=dbAPI;uid=root;password=fx870";
             //var connectionString = "Data Source=localhost; Initial Catalog=dbapi; User Id=sa; Password=Fx@870Fx@870";

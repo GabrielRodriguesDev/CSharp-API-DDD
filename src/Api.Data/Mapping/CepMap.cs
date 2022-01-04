@@ -18,7 +18,8 @@ namespace Api.Data.Mapping
 
             builder.HasIndex(c => c.Cep); //Criando um Index para otimizar
 
-            builder.HasOne(c => c.Municipio).WithMany(m => m.Ceps); // 1 Cep só pode ter 1 Municipio // 1 Municipio pode ter N Ceps
+            builder.HasOne(c => c.Municipio).WithMany(m => m.Ceps)
+                    .OnDelete(DeleteBehavior.Restrict); // 1 Cep só pode ter 1 Municipio // 1 Municipio pode ter N Ceps // E definindo o ondelete como restrict já que no ef o padrão é cascade
 
 
         }

@@ -16,7 +16,8 @@ namespace Api.Data.Mapping
 
             builder.HasKey(m => m.Id);
 
-            builder.HasOne(m => m.Uf).WithMany(u => u.Municipios); // 1 Municipio só pode ter 1 Uf // 1 UF pode ter N Municipios
+            builder.HasOne(m => m.Uf).WithMany(u => u.Municipios)
+                    .OnDelete(DeleteBehavior.Restrict); // 1 Municipio só pode ter 1 Uf // 1 UF pode ter N Municipios // E definindo o ondelete como restrict já que no ef o padrão é cascade
         }
     }
 }
