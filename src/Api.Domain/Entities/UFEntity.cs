@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Api.Domain.Entities
 {
-    public class UFEntity : BaseEntity
+    public class UfEntity : BaseEntity
     {
         [Required]
         [MaxLength(2)]

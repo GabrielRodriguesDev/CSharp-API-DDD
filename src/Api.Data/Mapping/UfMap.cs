@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Api.Data.Mapping
 {
-    public class UfMap : IEntityTypeConfiguration<UFEntity>
+    public class UfMap : IEntityTypeConfiguration<UfEntity>
     {
-        public void Configure(EntityTypeBuilder<UFEntity> builder)
+        public void Configure(EntityTypeBuilder<UfEntity> builder)
         {
             builder.ToTable("Uf");  //Definindo o nome da tabela
 
