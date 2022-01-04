@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Api.Domain.Entities
 {
-    public class CepEntity
+    public class CepEntity : BaseEntity
     {
         [Required]
         [MaxLength(10)]
