@@ -12,8 +12,25 @@ namespace Api.CrossCutting.Mappings
     {
         public ModelToEntityProfile()
         {
+            #region  User
             CreateMap<UserEntity, UserModel>()
             .ReverseMap();
+            #endregion
+
+            #region Uf
+            CreateMap<UfEntity, UfModel>()
+            .ReverseMap();
+            #endregion
+
+            #region  Municipio
+            CreateMap<MunicipioEntity, MunicipioModel>()
+            .ReverseMap();
+            #endregion
+
+            #region  Cep
+            CreateMap<CepEntity, CepModel>()
+            .ReverseMap();
+            #endregion
         }
     }
 }
