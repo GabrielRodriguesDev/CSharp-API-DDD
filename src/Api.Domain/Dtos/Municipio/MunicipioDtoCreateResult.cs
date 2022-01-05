@@ -15,6 +15,6 @@ namespace Api.Domain.Dtos.Municipio
 
         public Guid UfId { get; set; }
 
-        public DateTime CreatAt { get; set; }
+        public DateTime CreateAt { get; set; }
     }
 }

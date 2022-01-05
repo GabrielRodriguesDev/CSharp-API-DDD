@@ -30,7 +30,7 @@ namespace Api.Data.Test
                 MunicipioEntity _entityMunicipio = new MunicipioEntity
                 {
                     Nome = Faker.Address.City(),
-                    CodIbge = Faker.RandomNumber.Next(1000000, 9999999),
+                    CodIBGE = Faker.RandomNumber.Next(1000000, 9999999),
                     UfId = new Guid("e7e416de-477c-4fa3-a541-b5af5f35ccf6")
                 };
 

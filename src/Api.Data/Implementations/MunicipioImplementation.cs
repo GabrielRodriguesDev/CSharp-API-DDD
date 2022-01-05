@@ -20,7 +20,7 @@ namespace Api.Data.Implementations
 
         public async Task<MunicipioEntity> GetCompleteByIBGE(int codIBGE)
         {
-            return await this._dataset.Include(m => m.Uf).FirstOrDefaultAsync(m => m.CodIbge.Equals(codIBGE));
+            return await this._dataset.Include(m => m.Uf).FirstOrDefaultAsync(m => m.CodIBGE.Equals(codIBGE));
         }
 
         public async Task<MunicipioEntity> GetCompleteById(Guid id)

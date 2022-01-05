@@ -28,14 +28,14 @@ namespace Api.Data.Test
                 MunicipioEntity _entity = new MunicipioEntity
                 {
                     Nome = Faker.Address.City(),
-                    CodIbge = Faker.RandomNumber.Next(1000000, 9999999),
+                    CodIBGE = Faker.RandomNumber.Next(1000000, 9999999),
                     UfId = new Guid("e7e416de-477c-4fa3-a541-b5af5f35ccf6")
                 };
 
                 var _registroCriado = await _repositorio.InsertAsync(_entity);
                 Assert.NotNull(_registroCriado);
                 Assert.Equal(_registroCriado.Nome, _entity.Nome);
-                Assert.Equal(_registroCriado.CodIbge, _entity.CodIbge);
+                Assert.Equal(_registroCriado.CodIBGE, _entity.CodIBGE);
                 Assert.Equal(_registroCriado.UfId, _entity.UfId);
                 Assert.False(_registroCriado.Id == Guid.Empty);
 
@@ -44,7 +44,7 @@ namespace Api.Data.Test
                 var _regitroAtualizado = await _repositorio.UpdateAsync(_entity);
                 Assert.NotNull(_regitroAtualizado);
                 Assert.Equal(_regitroAtualizado.Nome, _entity.Nome);
-                Assert.Equal(_regitroAtualizado.CodIbge, _entity.CodIbge);
+                Assert.Equal(_regitroAtualizado.CodIBGE, _entity.CodIBGE);
                 Assert.Equal(_regitroAtualizado.UfId, _entity.UfId);
 
 
@@ -55,7 +55,7 @@ namespace Api.Data.Test
                 Assert.Equal(_registroSelecionado.UfId, _entity.UfId);
                 Assert.Null(_registroSelecionado.Uf);
 
-                _registroSelecionado = await _repositorio.GetCompleteByIBGE(_regitroAtualizado.CodIbge);
+                _registroSelecionado = await _repositorio.GetCompleteByIBGE(_regitroAtualizado.CodIBGE);
                 Assert.NotNull(_registroSelecionado);
                 Assert.Equal(_regitroAtualizado.Id, _registroSelecionado.Id);
                 Assert.Equal(_regitroAtualizado.Nome, _registroSelecionado.Nome);

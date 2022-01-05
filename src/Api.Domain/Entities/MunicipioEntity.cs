@@ -12,7 +12,7 @@ namespace Api.Domain.Entities
         [MaxLength(60)]
         public string Nome { get; set; }
 
-        public int CodIbge { get; set; }
+        public int CodIBGE { get; set; }
 
         [Required]
         public Guid UfId { get; set; }
