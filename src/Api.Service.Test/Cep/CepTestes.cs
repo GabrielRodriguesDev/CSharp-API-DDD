@@ -14,8 +14,11 @@ namespace Api.Service.Test.Cep
 
         public string Cep { get; set; }
 
+        public string CepAlterado { get; set; }
+
         public string Logradouro { get; set; }
 
+        public string LogradouroAlterado { get; set; }
 
         public string Numero { get; set; }
 
@@ -39,6 +42,8 @@ namespace Api.Service.Test.Cep
             Id = Guid.NewGuid();
             Cep = Faker.RandomNumber.Next(1, 10000).ToString();
             Logradouro = Faker.Address.StreetAddress();
+            CepAlterado = Faker.RandomNumber.Next(1, 10000).ToString();
+            LogradouroAlterado = Faker.Address.StreetAddress();
             Numero = "";
             MunicipioId = Guid.NewGuid();
             Municipio = new MunicipioDtoCompleto
@@ -86,8 +91,8 @@ namespace Api.Service.Test.Cep
             cepDtoUpdate = new CepDtoUpdate
             {
                 Id = this.Id,
-                Cep = this.Cep,
-                Logradouro = this.Logradouro,
+                Cep = this.CepAlterado,
+                Logradouro = this.LogradouroAlterado,
                 Numero = this.Numero,
                 MunicipioId = this.MunicipioId,
             };
@@ -95,8 +100,8 @@ namespace Api.Service.Test.Cep
             CepDtoUpdateResult = new CepDtoUpdateResult
             {
                 Id = this.Id,
-                Cep = this.Cep,
-                Logradouro = this.Logradouro,
+                Cep = this.CepAlterado,
+                Logradouro = this.LogradouroAlterado,
                 Numero = this.Numero,
                 MunicipioId = this.MunicipioId,
                 UpdateAt = DateTime.UtcNow

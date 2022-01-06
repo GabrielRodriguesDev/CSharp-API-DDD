@@ -23,6 +23,8 @@ namespace Api.Service.Test.Cep
             Assert.Equal(resultGetId.Id, cepDto.Id);
             Assert.Equal(resultGetId.Cep, cepDto.Cep);
             Assert.Equal(resultGetId.Logradouro, cepDto.Logradouro);
+            Assert.NotNull(resultGetId.Municipio);
+            Assert.NotNull(resultGetId.Municipio.Uf);
 
             _serviceMock.Setup(m => m.Get(this.Cep)).ReturnsAsync(cepDto);
 
@@ -31,6 +33,8 @@ namespace Api.Service.Test.Cep
             Assert.Equal(resultGetCep.Id, cepDto.Id);
             Assert.Equal(resultGetCep.Cep, cepDto.Cep);
             Assert.Equal(resultGetCep.Logradouro, cepDto.Logradouro);
+            Assert.NotNull(resultGetCep.Municipio);
+            Assert.NotNull(resultGetCep.Municipio.Uf);
         }
     }
 }

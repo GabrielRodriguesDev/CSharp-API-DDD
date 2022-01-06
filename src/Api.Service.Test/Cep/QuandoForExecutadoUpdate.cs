@@ -20,11 +20,11 @@ namespace Api.Service.Test.Cep
 
             var result = await _serviceMock.Object.Put(cepDtoUpdate);
             Assert.NotNull(result);
-            Assert.Equal(result.Id, cepDto.Id);
-            Assert.Equal(result.Cep, cepDto.Cep);
-            Assert.Equal(result.Logradouro, cepDto.Logradouro);
-            Assert.Equal(result.Numero, cepDto.Numero);
-            Assert.Equal(result.MunicipioId, cepDto.MunicipioId);
+            Assert.Equal(result.Id, cepDtoUpdate.Id);
+            Assert.Equal(result.Cep, cepDtoUpdate.Cep);
+            Assert.Equal(result.Logradouro, cepDtoUpdate.Logradouro);
+            Assert.Equal(result.Numero, cepDtoUpdate.Numero);
+            Assert.Equal(result.MunicipioId, cepDtoUpdate.MunicipioId);
             Assert.NotNull(result.UpdateAt);
         }
     }
