@@ -20,7 +20,7 @@ namespace Api.Application.Controllers
             this._service = service;
         }
 
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -38,7 +38,7 @@ namespace Api.Application.Controllers
             }
         }
 
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpGet]
         [Route("{id}", Name = "GetMunicipioWithId")]
         public async Task<IActionResult> Get(Guid id)
@@ -63,7 +63,7 @@ namespace Api.Application.Controllers
             }
         }
 
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpGet]
         [Route("{idMunicipio}")]
         public async Task<IActionResult> GetCompleteById(Guid idMunicipio)
@@ -88,9 +88,9 @@ namespace Api.Application.Controllers
             }
         }
 
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpGet]
-        [Route("{ibge}")]
+        [Route("byIbge/{ibge}")]
         public async Task<IActionResult> GetCompleteByIbge(int ibge)
         {
             if (!ModelState.IsValid)
@@ -113,7 +113,7 @@ namespace Api.Application.Controllers
             }
         }
 
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] MunicipioDtoCreate dtoCrete)
         {
@@ -141,7 +141,7 @@ namespace Api.Application.Controllers
             }
         }
 
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         [HttpPut]
         public async Task<IActionResult> Put(MunicipioDtoUpdate dtoUpdate)
         {
