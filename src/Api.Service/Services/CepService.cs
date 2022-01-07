@@ -16,6 +16,12 @@ namespace Api.Service.Services
         private ICepRepository _repository;
         private IMapper _mapper;
 
+        public CepService(ICepRepository repository, IMapper mapper)
+        {
+            this._repository = repository;
+            this._mapper = mapper;
+        }
+
         public async Task<bool> Delete(Guid id)
         {
             return await _repository.DeleteAsync(id);
