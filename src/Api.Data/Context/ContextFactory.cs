@@ -9,7 +9,8 @@ namespace Api.Data.Context
 {
     public class ContextFactory : IDesignTimeDbContextFactory<MyContext>
     {
-        public MyContext CreateDbContext(string[] args)
+        public MyContext CreateDbContext(string[] args) //ESSA CLASSE NÃO ESTÁ SENDO USADA PARA NADA
+
         {
 
             //Usado para criar migrações

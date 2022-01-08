@@ -26,7 +26,7 @@ namespace Api.Integration.Test
 
         public string hostApi { get; set; }
 
-        public HttpRequestMessage response { get; set; }
+
 
         public BaseIntegration()
         {
@@ -45,6 +45,15 @@ namespace Api.Integration.Test
             client = server.CreateClient(); //Simulando um servidor (Postman)
         }
 
+
+        public static async Task<HttpResponseMessage> PostJsonAsync(object dataclass, string url, HttpClient client)
+        {
+            return await client.PostAsync(url,
+            new StringContent(JsonConvert.SerializeObject(dataclass),
+            System.Text.Encoding.UTF8, "application/json")); // Post Generico
+        }
+
+
         public async Task AdicionarToken()
         {
             var loginDto = new LoginDto()
@@ -58,13 +67,6 @@ namespace Api.Integration.Test
 
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer",
                                                                                         loginObject.acessToken);
-        }
-
-        public static async Task<HttpResponseMessage> PostJsonAsync(object dataclass, string url, HttpClient client)
-        {
-            return await client.PostAsync(url,
-            new StringContent(JsonConvert.SerializeObject(dataclass),
-            System.Text.Encoding.UTF8, "application/json")); // Post Generico
         }
 
         public void Dispose()
