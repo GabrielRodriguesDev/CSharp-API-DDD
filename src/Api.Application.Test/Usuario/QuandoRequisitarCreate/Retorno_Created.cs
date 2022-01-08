@@ -11,7 +11,7 @@ using Xunit;
 
 namespace Api.Application.Test.Usuario.QuandoRequisitarCreate
 {
-    public class Retorno_Create
+    public class Retorno_Created
     {
         private UsersController _controller;
 
